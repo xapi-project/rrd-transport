@@ -1,5 +1,5 @@
 language: c
-sudo: false
+sudo: required
 services:
   - docker
 install:
@@ -8,7 +8,6 @@ script:
   - bash -ex .travis-docker.sh
 env:
   global:
-    - OCAML_VERSION=4.07
     - DISTRO=debian-unstable
     - PINS="rrd-transport:. xapi-rrd-transport:. xapi-rrd-transport-utils:."
     - PACKAGE=rrd-transport
